@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "rusty_backend": {
+      "candid": "src/rusty_backend/rusty_backend.did",
+      "package": "rusty_backend",
+      "type": "rust"
+    },
+    "rusty_frontend": {
+      "dependencies": [
+        "rusty_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/rusty_frontend/src/index.html"
+      },
+      "source": [
+        "src/rusty_frontend/assets",
+        "dist/rusty_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
